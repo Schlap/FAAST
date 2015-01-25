@@ -8,5 +8,6 @@ class Passenger
 
   def tap_in(station)
     @balance -= 2
+    station.accept(self)
   end
 end
