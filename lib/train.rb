@@ -19,4 +19,5 @@ class Train
   def leave(station)
     station.disembark(self)
   end
+
 end

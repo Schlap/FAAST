@@ -20,4 +20,5 @@ describe 'Train' do
     expect(station).to receive(:disembark).with(train)
     train.leave(station)
   end
+  
 end

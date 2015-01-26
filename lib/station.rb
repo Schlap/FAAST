@@ -12,6 +12,10 @@ attr_accessor :capacity
     @passengers << passenger
   end
 
+  def expel(passenger)
+    @passengers.pop
+  end
+
   def passenger_count
     @passengers.count
   end
@@ -28,4 +32,5 @@ attr_accessor :capacity
   def full?
     train_count == @capacity
   end
+
 end

@@ -16,6 +16,14 @@ describe 'Station' do
     expect(station.passenger_count).to eq 1
   end
 
+  it 'should know when a passenger taps out' do
+    allow(passenger).to receive(:tap_in).with(station)
+    station.accept(passenger)
+    allow(passenger).to receive(:tap_out).with(station)
+    station.expel(passenger)
+    expect(station.passenger_count).to eq 0
+  end
+
   it 'should know when a train arrives' do
     station.receive(train)
     expect(station.train_count).to eq 1
@@ -30,4 +38,5 @@ describe 'Station' do
     8.times{station.receive(train)}
     expect(lambda{station.receive(train)}).to raise_error 'Station is full'
   end
+
 end

@@ -12,6 +12,7 @@ class Coach
   end
 
   def board(passenger)
+    raise 'Coach is full' if passenger_count == @capacity
     @passengers << passenger
   end
 
@@ -22,4 +23,5 @@ class Coach
   def full?
     passenger_count == @capacity
   end
+
 end
