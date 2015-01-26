@@ -15,7 +15,7 @@ describe 'Passenger' do
   end
 
   it 'should deduct two pounds from balance when tapped in' do
-    expect(station).to receive(:accept).with(passenger)
+    allow(station).to receive(:accept).with(passenger)
     passenger.tap_in(station)
     expect(passenger.balance).to eq 8
   end
