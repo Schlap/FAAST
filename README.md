@@ -21,4 +21,8 @@ This is a fully tested model of an underground transport system written in pure 
 - Refactoring Long Tests and Methods
 - Planning Interactions between Classes
 
-## Use
+## Usage
+
+- Clone this repo
+- cd into repo
+- run RSpec
